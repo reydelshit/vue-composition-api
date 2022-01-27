@@ -2,7 +2,7 @@
       <h1>Composition API</h1>
   <div class="post-list">
       <div v-for="post in posts" :key="post.id">
-          <PostDetails :post="post"/>
+            <PostDetails :post="post"/>
       </div>
   </div>
 </template>
