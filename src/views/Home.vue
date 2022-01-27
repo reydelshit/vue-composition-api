@@ -1,35 +1,46 @@
 <template>
-
-<!-- for refs -->
-  <!-- <h1>my name is : {{name}}</h1>
+<!-- 
+for refs
+  <h1>my name is : {{name}}</h1>
   <h1>age : {{age}}</h1>
 
   <button @click="clickMe">click me</button>
-  <input type="textd" v-model="name"> -->
+  <input type="textd" v-model="name">
 
-  <!-- for reactive -->
-  <!-- <h1>{{ ninOne.name }}</h1>
+  for reactive
+  <h1>{{ ninOne.name }}</h1>
   <h1>{{ ninOne.age }}</h1>
 
    <h1>{{ ninTwo.name }}</h1>
   <h1>{{ ninTwo.age }}</h1>
 
-  <button @click="upNinOne">hoy</button> -->
+  <button @click="upNinOne">hoy</button>
 
   <input type="text" v-model="search">
 
   <h1>search results: {{search}}</h1>
   <div v-for="name in matching" :key="name">
     <h1>{{name}}</h1>
+  </div> -->
+  <div v-if="err"> {{err}} </div>
+
+  <div v-if="posts.length">
+    <Post :posts="posts"/>
   </div>
+  <div v-else> brooooooooooooooo</div>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
-import { computed, watch } from '@vue/runtime-core'
+import Post from '../components/Post.vue'
+import getPost from '../reusable/getPost'
+// import { onMounted } from '@vue/runtime-core'
+// import { computed, watch } from '@vue/runtime-core'
 
 export default {
   name: 'Home',
+  components:{
+    Post
+  },
 
   // mounted() {
   //   console.log(this)
@@ -74,20 +85,29 @@ export default {
   // }
 
 
-  setup(){
-    const search = ref('')
-    const names = ref(['mario', 'yoshi', 'luigi', 'toad', 'bowser', 'koopa', 'peach'])
+  // setup(){
+  //   const search = ref('')
+  //   const names = ref(['mario', 'yoshi', 'luigi', 'toad', 'bowser', 'koopa', 'peach'])
+  //   watch(search, () => {
+  //     console.log('ohyao')
+  //   })
+  //   const matching = computed(() => {
+  //     return names.value.filter((e) => e.includes(search.value))
+  //   })
 
-    watch(search, () => {
-      console.log('ohyao')
-    })
-    const matching = computed(() => {
-      return names.value.filter((e) => e.includes(search.value))
-    })
+
+  //   return { names, search, matching }
+  // }
 
 
-    return { names, search, matching }
-  }
+  setup() {
+    
+    const { posts, err, fetchPost } = getPost()
+
+      fetchPost()
+
+    return { posts, err }
+  } 
 
 }
 </script>

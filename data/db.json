@@ -1,0 +1,23 @@
+{
+    "posts": [
+        { 
+        "id": 1 ,
+        "title": "top 10 html best tips", 
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta adipisci cupiditate vero pariatur, incidunt accusamus. Repellendus, unde dolores laudantium aspernatur neque repellat? Quam aliquam eligendi quidem fuga esse expedita totam aliquid quia similique accusantium debitis magni tenetur et assumenda laborum repellat accusamus unde omnis, id vel deleniti ipsum maxime voluptate nostrum. Voluptates maxime eligendi soluta, veritatis accusamus vitae aliquid! Sunt mollitia alias quod eaque explicabo quae repudiandae molestiae dolore expedita aliquid et adipisci id fugit, ipsam assumenda? Nobis eligendi corrupti voluptate perferendis in magnam tempore doloribus, fuga quae rem architecto optio veritatis dolorum perspiciatis odio facere expedita voluptatibus voluptates.'",
+        "tags": [
+            "html",
+            "html tips",
+            "html the best"
+        ]
+    },
+        { 
+        "id": 2,
+        "title": "top 5 css tips", 
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta adipisci cupiditate vero pariatur, incidunt accusamus. Repellendus, unde dolores laudantium aspernatur neque repellat? Quam aliquam eligendi quidem fuga esse expedita totam aliquid quia similique accusantium debitis magni tenetur et assumenda laborum repellat accusamus unde omnis, id vel deleniti ipsum maxime voluptate nostrum. Voluptates maxime eligendi soluta, veritatis accusamus vitae aliquid! Sunt mollitia alias quod eaque explicabo quae repudiandae molestiae dolore expedita aliquid et adipisci id fugit, ipsam assumenda? Nobis eligendi corrupti voluptate perferendis in magnam tempore doloribus, fuga quae rem architecto optio veritatis dolorum perspiciatis odio facere expedita voluptatibus voluptates.",
+        "tags": [
+            "css",
+            "css tips",
+            "css the best"
+        ]
+    }]
+}
